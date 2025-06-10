@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from models import LoginDoctor, CreateDoctor, CreatePatient, LoginPatient, SetAdmission
+from models import LoginDoctor, CreateDoctor, CreatePatient, LoginPatient, SetAdmission, SetDiagnoses
 from hospital_core import hospital, login_doctor, add_doctor, show_hospital, login_patient, add_patient, add_admission
 app = FastAPI()
 
@@ -26,3 +26,7 @@ def regPatient(data: CreatePatient):
 @app.post("/patient/new_admissions")
 def createAdmission(admission_info:SetAdmission):
     return add_admission(admission_info)
+
+@app.post("/doctor/new_diagnoses")
+def createDiagnoses(diagnoses_info:SetDiagnoses):
+

@@ -20,3 +20,9 @@ class SetAdmission(BaseModel):
     doctor_id: int = Field(...)
     description: str
 
+class SetDiagnoses(BaseModel):
+    patient_id: int = Field(...)
+    doctor_id: int = Field(...)
+    description: str
+
+
