@@ -29,4 +29,4 @@ def createAdmission(admission_info:SetAdmission):
 
 @app.post("/doctor/new_diagnoses")
 def createDiagnoses(diagnoses_info:SetDiagnoses):
-
+    return
