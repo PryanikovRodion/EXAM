@@ -46,3 +46,6 @@ def add_admission(admission_info:SetAdmission):
         patient.addAdmission(admission)
         admission_id = len(hospital["admissions"])
         hospital["admissions"][admission_id] = admission
+        return {"message": "Create admmision successful", "admission_id": admission_id}
+    else: {"message": "Create admmision failed"}
+

@@ -15,8 +15,8 @@ class LoginPatient(BaseModel):
     name: str = Field(..., description="Name of the patient")
 
 class SetAdmission(BaseModel):
-    patient_id = Field(...)
-    time:str = Field(..., description="Time of Admission")
-    doctor_id:int = Field(...)
-    description:str
+    patient_id: int = Field(...)
+    time: str = Field(..., description="Time of Admission")
+    doctor_id: int = Field(...)
+    description: str
 
